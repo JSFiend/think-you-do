@@ -15,3 +15,16 @@
   <div>my name is combine </div>
   
 ```
+-------------------------------------- 2019.06.08 -------------------------------------------------------
+## 实现
+实现是比较容易的， 全局找出 `{{ params }}` 表达式，来替换就行了。如下
+``` js
+class Parser {
+  parser(content, data) {
+    const parserContent = content.replace(/\{\{\s*?([^\s]*?)\s*?\}\}/g, (...a) => {
+      return data[a[1]];
+    });
+    return parserContent.trim();
+  }
+}
+```
