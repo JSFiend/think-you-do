@@ -1,6 +1,5 @@
 # 导航到构建输出目录
 cd docs/.vuepress/dist
-
 git init
 git config user.name "JSFiend"
 git config user.email "combine.lee@gmail.com "

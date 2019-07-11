@@ -4,4 +4,10 @@ node_js:
 script:
   - npm run build
 after_success:
-  - ./deploy.sh
+  - cd docs/.vuepress/dist
+  - git init
+  - git config user.name "JSFiend"
+  - git config user.email "combine.lee@gmail.com "
+  - git add -A
+  - git commit -m 'deploy'
+  - git push -f https://${access_token}@github.com/JSFiend/think-you-do.git master:gh-pages
