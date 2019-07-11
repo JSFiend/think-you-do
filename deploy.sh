@@ -8,6 +8,6 @@ git add -A
 git commit -m 'deploy'
 
 # 推到你仓库的的 gh-page 分支
-git push -f git@github.com:JSFiend/think-you-do.git master:gh-pages
+# git push -f git@github.com:JSFiend/think-you-do.git master:gh-pages
 # 使用 travis 持续集成
 git push -f https://${access_token}@github.com/JSFiend/think-you-do.git master:gh-pages
